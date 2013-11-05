@@ -34,10 +34,8 @@ ifeq ($(TARGET_USES_QCOM_BSP),true)
     common_flags += -DQCOM_BSP
 endif
 
-ifeq ($(call is-vendor-board-platform,QCOM),true)
 common_deps += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 kernel_includes += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-endif
 
 ifneq ($(TARGET_DISPLAY_INSECURE_MM_HEAP),true)
     common_flags += -DSECURE_MM_HEAP
